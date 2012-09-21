@@ -29,8 +29,8 @@
         <script lang="javascript" type="text/javascript">
             function displayGeo() {
                 document.getElementById("geolocBox").innerHTML = myGps.get();
-                geoposString = ''+position.coords.latitude+','+position.coords.longitude;
                 myGps.update(function(position) {
+                    geoposString = ''+position.coords.latitude+','+position.coords.longitude;
                     $('#geoMap').gmap().bind('init', function(ev, map) {
                         $('#geoMap').gmap('addMarker', {'position': geoposString, 'bounds': true}).click(function() {
                             $('#geoMap').gmap('openInfoWindow', {'content': 'Votre position !!!<br/>'+document.getElementById("geolocBox").innerHTML}, this);
@@ -77,7 +77,7 @@
     </head>
 
     <body>
-        <div id="home" data-role="page">
+        <div id="home" data-role="page" data-position="fixed">
             <div data-role="header"><h1>myBD.fr</h1></div>
             <div data-role="content">
                 <ul data-role="listview" data-theme="e">
@@ -87,12 +87,12 @@
                     <li><a href="#legal">Info l&eacute;gales</a></li>
                 </ul>
             </div>
-            <div data-role="footer"><h6>&copy; MOI</h6></div>
+            <div data-role="footer" data-position="fixed"><h6>&copy; MOI</h6></div>
         </div>
 
 
         <div id="search" data-role="page" data-add-back-btn="true">
-            <div data-role="header"><h1>Recherche</h1></div>
+            <div data-role="header" data-position="fixed"><h1>Recherche</h1></div>
             <div data-role="content"><form name="recherche" action="index.php" method="get">
                     <fieldset>
                         <div class="row">
@@ -122,7 +122,7 @@
                     </fieldset>
                 </form>
             </div>
-            <div data-role="footer" class="ui-bar">
+            <div data-role="footer" class="ui-bar" data-position="fixed">
                 <a href="javascript:reInit()" data-role="button" data-icon="delete">Re-initialiser</a>
                 <a href="javascript:recherche.submit()" data-role="button" data-icon="search" data-theme="b">Rechercher</a>
             </div>
@@ -130,7 +130,7 @@
 
 
         <div id="last" data-role="page" data-add-back-btn="true">
-            <div data-role="header"><h1>Dernièrement</h1></div>
+            <div data-role="header" data-position="fixed"><h1>Dernièrement</h1></div>
             <div data-role="content">
                 Ici mettre la liste des dernières BD
                 <p>
@@ -146,12 +146,12 @@
                     </video>
                 </p>
             </div>
-            <div data-role="footer"><h6>&copy; MOI</h6></div>
+            <div data-role="footer" data-position="fixed"><h6>&copy; MOI</h6></div>
         </div>
 
 
         <div id="random" data-role="page" data-add-back-btn="true">
-            <div data-role="header"><h1>Hasard</h1></div>
+            <div data-role="header" data-position="fixed"><h1>Hasard</h1></div>
             <div data-role="content">
                 <p>plus tard, remplir cette section avec du contenu dynamique</p>
                 <p>Vos informations de géolocalisation sont les suivantes :
@@ -160,18 +160,18 @@
                 </p>
                 <div id="geoMap" class="map rounded" style="width: 100%; height: 400px"></div>
             </div>
-            <div data-role="footer"><h6>&copy; MOI</h6></div>
+            <div data-role="footer" data-position="fixed"><h6>&copy; MOI</h6></div>
         </div>
 
 
         <div id="legal" data-role="page" data-add-back-btn="true">
-            <div data-role="header"><h1>Info Légales</h1></div>
+            <div data-role="header" data-position="fixed"><h1>Info Légales</h1></div>
             <div data-role="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue viverra condimentum. Vivamus cursus ante et nunc pretium sollicitudin sit amet a dui. Vivamus dui mi, volutpat ac scelerisque in, imperdiet at ipsum. Curabitur vitae turpis at tellus imperdiet semper vitae a metus. Ut faucibus, odio ut cursus pretium, libero sapien viverra augue, et laoreet leo dolor aliquam orci. Nunc eu mattis turpis. Sed sit amet nisl ac dui rutrum viverra at et lectus. Donec eu aliquet lorem. Sed dignissim, diam nec dignissim ullamcorper, metus lectus varius mi, id consequat turpis erat eu sapien. Nam vehicula volutpat urna, sed fringilla tortor tristique non. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus accumsan semper quam, sit amet cursus purus semper sit amet. Mauris sed feugiat mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
                 <p>Donec lobortis purus non purus porttitor ornare. Duis quis quam ligula, quis ullamcorper leo. Sed vestibulum consequat mattis. Phasellus ut nulla sit amet lacus ullamcorper rutrum sed ut tortor. Nam id felis sit amet tellus imperdiet tincidunt non ac dui. Donec sit amet nisl a mauris facilisis condimentum nec consequat nulla. Nulla auctor varius nisl, non facilisis odio fringilla eget. Aenean sollicitudin pulvinar nisi at dignissim. Nam dapibus vehicula dui non sagittis. Vivamus viverra, diam suscipit molestie aliquet, sem turpis sollicitudin turpis, aliquam elementum neque mi eu arcu. Donec dolor eros, cursus porttitor sollicitudin vel, iaculis et est. Integer eu orci sit amet sapien tempor luctus. Nunc consectetur odio non ante faucibus venenatis. Sed scelerisque pretium nisl, eget luctus felis auctor vel. Pellentesque tortor felis, dictum vel congue et, ornare ut purus. Mauris mollis ultrices lorem, in aliquam magna sodales eu.</p>
                 <p>Nullam nec quam velit, non gravida arcu. Integer et sem quis turpis consequat tristique a ac diam. Duis non nisi tortor, porta ultricies sem. Nulla at nibh quam. In ac tortor et urna semper dictum id sit amet enim. Donec quis nibh non purus bibendum egestas. Aenean tincidunt quam et nisl sollicitudin et pharetra eros tincidunt. Aliquam suscipit tempus arcu et varius. Maecenas consectetur, turpis eu sodales tincidunt, elit lorem condimentum nisi, volutpat tincidunt neque sapien et augue. In molestie porta eros, eget egestas tellus ultricies in. Vivamus fermentum dignissim velit, quis accumsan ligula elementum eget.</p>
             </div>
-            <div data-role="footer"><h6>&copy; MOI</h6></div>
+            <div data-role="footer" data-position="fixed"><h6>&copy; MOI</h6></div>
         </div>
     </body>
 </html>

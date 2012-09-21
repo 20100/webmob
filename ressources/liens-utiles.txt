@@ -52,3 +52,12 @@ http://www.sencha.com/learn/a-sencha-touch-mvc-application-with-phonegap/
 
 
 
+
+
+DOCUMENTATION SENCHA TOUCH
+--------------------------
+http://docs.sencha.com/touch/2-0/#!/guide/command
+
+
+
+

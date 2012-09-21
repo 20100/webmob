@@ -23,6 +23,7 @@ Résumé   : Version plus complète d'une application
             <div data-role="footer"><h6>Pied de page</h6></div>
     </div>
   * Rajouter le data-add-back-btn="true" a toutes les pages sauf la home
+  * Rajouter l'attribut  data-position="fixed" sur les footers de pages
 
 3. Pour la page formulaire, faire quelques modifications
   * Rajouter la classe ui-bar sur le footer de la page de notre formulaire
