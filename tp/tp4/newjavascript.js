@@ -4,3 +4,9 @@
  */
 
 
+var button = Ext.create('Ext.Button', {
+    text: 'Button',
+    listeners : {
+        tap : function()
+    }
+)
