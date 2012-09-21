@@ -5,13 +5,13 @@
 	 * This is the name of your application, which is displayed on the device when the app is installed. On IOS, this should match
 	 * the name of your application in the Apple Provisioning Portal.
 	 */
-	"applicationName":"My BD.fr",
+	"applicationName":"My Application",
 
 	/**
 	 * @cfg {String} applicationId
 	 * This is the name namespace for your application. On IOS, this should match the name of your application in the Apple Provisioning Portal.
 	 */
-	"applicationId":"com.ib.myBdApp",
+	"applicationId":"com.mycompany.myAppID",
 
 	/**
 	 * @cfg {String} versionString
@@ -98,13 +98,13 @@
 	 * When using a certificatePath on Windows, you do not need to specify this.
 	 */
 	"certificateAlias":"",
-
+	
 	/**
 	 * @cfg {String} sdkPath
 	 * This is the path to the Android SDK, if you are developing an Android application.
 	 */
-	"sdkPath":"/home/cl/bin/android-sdk-linux",
-
+	"sdkPath":"/path/to/android-sdk",
+	
 	/**
 	 * @cfg  androidAPILevel
 	 * This is android API level, the version of Android SDK to use, you can read more about it here: http://developer.android.com/guide/appendix/api-levels.html.

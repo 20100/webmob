@@ -2,7 +2,7 @@
     /**
      * The application's namespace, used by Sencha Command to generate classes
      */
-    "name": "mybd",
+    "name": "MyApp",
 
     /**
      * The file path to this application's front HTML document, relative to this app.json file
@@ -16,7 +16,7 @@
      * This value is needed when build to resolve your application's dependencies if it requires server-side resources
      * that are not accessible via file system protocol.
      */
-    "url": null,
+    "url": "http://localhost/myapp/",
 
     /**
      * List of all JavaScript assets in the right execution order.
@@ -97,8 +97,7 @@
      * File / directory name matchers to ignore when copying to the builds, must be valid regular expressions
      */
     "ignore": [
-        "\.svn$",
-        "\.git$"
+        "\.svn$"
     ],
 
     /**
@@ -124,12 +123,12 @@
         "product": "touch",
         "minVersion": 3,
         "debug": false,
-        "logger": "false"
+        "logger": "no"
     },
 
     /**
      * Uniquely generated id for this application, used as prefix for localStorage keys.
      * Normally you should never change this value.
      */
-    "id": "b9fba8b0-02b5-11e2-b509-513fb9a1ba0a"
+    "id": "04c69bb0-03f2-11e2-b999-3589f0a99425"
 }
