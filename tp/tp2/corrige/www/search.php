@@ -82,7 +82,7 @@
                         <div class="column">
                             <div>
                                 <label for="auteur">Auteur</label>
-                                <input id="auteur" name="auteur" onchange="memoriser()"/>
+                                <input id="auteur" name="auteur"  onchange="memoriser()"/>
                             </div>
                             <div>
                                 <label for="nationalite">Nationalit&eacute;</label>

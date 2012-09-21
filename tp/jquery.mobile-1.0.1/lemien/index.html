@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Page Title</title> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+
+<link rel="stylesheet" href="themes/android-theme.css" />
+<script type="text/javascript">
+var DEBUG_ANDROID_THEME=true
+</script>
+<script type="text/javascript" src="jquery.mobile.android-theme.js"></script>
+
+</head> 
+<body> 
+	<div data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="c">
+			<a href="#" data-role="button" data-icon="back" data-rel="back" class="hide-on-android" data-theme="c">Back</a>
+			<h1>Page Title</h1>
+			<a href="#" data-role="button" data-icon="plus" class="ui-btn-right" id="btn_new" data-theme="c">New Item</a>
+		</div><!-- /header -->
+		<div data-role="content" data-theme="c">	
+		    <ul id="list_todo" data-role="listview" data-inset="true" data-theme="c">
+		        <li>
+		            <a href="#dialog_item">
+		                <h2>Buying new pants</h2>
+		                <p>2 pieces of shorts and 1 of blue jeans.</p>
+		            </a>
+		        </li>
+		        <li>
+		            <a href="#dialog_item">
+		                <h2>Publicize vacation pictures</h2>
+		                <p>Copy from SD card to web album.</p>
+		            </a>
+		        </li>
+		    </ul>
+		    <a href="#" data-role="button" data-theme="a">theme A</a>
+		    <a href="#" data-role="button" data-theme="b">theme B</a>
+		    <a href="#" data-role="button" data-theme="c">theme C</a>
+		    <a href="#" data-role="button" data-theme="d">theme D</a>
+		</div><!-- /content -->
+		<div data-role="footer" data-position="fixed" data-theme="c">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+</body>
+</html>
